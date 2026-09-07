@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadGuard X</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🚧 RoadGuard X</h1>
+    <p>AI-Powered Road Infrastructure Intelligence</p>
+</header>
+
+<main>
+
+    <section class="stats">
+        <div class="card">
+            <h3>Total Hazards</h3>
+            <h2 id="total">24</h2>
+        </div>
+
+        <div class="card critical">
+            <h3>Critical</h3>
+            <h2>5</h2>
+        </div>
+
+        <div class="card high">
+            <h3>High Risk</h3>
+            <h2>8</h2>
+        </div>
+
+        <div class="card low">
+            <h3>Low Risk</h3>
+            <h2>11</h2>
+        </div>
+    </section>
+
+    <section class="upload">
+        <h2>🔍 AI Road Hazard Detection</h2>
+        <p>Upload a road image to detect potholes or open manholes.</p>
+
+        <input type="file" id="imageInput" accept="image/*">
+
+        <button onclick="detectHazard()">Detect Hazard</button>
+
+        <div id="result"></div>
+    </section>
+
+    <section class="incident">
+        <h2>⚠️ Latest Detected Hazard</h2>
+
+        <div class="hazard-box">
+            <h3>Open Manhole</h3>
+
+            <p><b>Risk Score:</b> <span class="risk">94/100</span></p>
+
+            <p><b>Priority:</b> P0 - Critical</p>
+
+            <p><b>Location:</b> Tambaram, Chennai</p>
+
+            <button onclick="sendAlert()">🚨 Send Municipal Alert</button>
+
+            <p id="alert"></p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>RoadGuard X © 2026 | Detect. Predict. Prioritize. Respond. Verify.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
